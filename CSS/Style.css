@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Main_Container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-Color:rgba(0,0,0,1);
+}
+.Heading-Container{
+	position: relative;
+	color: rgba(255,255,255,1);
+	/* border: 1px solid green; */
+	text-align: center;
+}
+.Heading-Container h1{
+	font-family: 'Dancing Script', cursive;
+}
+.Heading-Container h2{
+	font-family: 'Varela Round', sans-serif;
+}
+.Subject{
+	position: relative;
+	color: rgba(255,255,255,1);
+	/* border: 1px solid green; */
+	text-align: center;
+	top: 10px;
+}
+.Subject h1{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1em;
+}
+.Subject h2{
+	font-family: 'Dancing Script', cursive;
+	font-size: 1em;
+}
+.Services-Card-Container{
+	position: relative;
+	width: 90%;
+	margin: 10px 60px 60px 60px;
+	/* border: 1px solid green; */
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.Serv-Name{
+	position: absolute;
+	background-Color: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 75px;
+	z-index: 3;
+}
+.Serv-Name h1{
+	font-size: 1.3em;
+	margin-top: 25px;
+}
+.ServiceCard{
+	position: relative;
+	width: 300px;
+	height: 200px;
+	/* border: 1px solid yellow; */
+	display: inline-block;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	margin-top: 20px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.ServiceCard:hover{
+	height: 400px;
+}
+.ServiceCard .Serv-Img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;	
+}
+
+.Serv-Img img {
+	position: absolute;
+	width: 300px;
+	height: 250px;	
+	top: 0;
+	left: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	z-index: 2;
+}
+.ServiceCard .Serv-Img img{
+	max-width: 100%;
+	opacity: .1;
+	transition: 0.5s;
+}
+.ServiceCard:hover .Serv-Img img{
+	opacity: 1;
+}
+.ServiceCard:before{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: white;
+	z-index: 0;
+}
+.ServiceCard:after{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: white;
+	z-index: 0;
+}
+.ServiceCard:before,
+.ServiceCard:after{
+	background: linear-gradient(235deg,#89ff00,#010615, #00bcd4);
+}
+.ServiceCard:nth-child(2):before,
+.ServiceCard:nth-child(2):after{
+	background: linear-gradient(235deg,#ff005e ,#010615, #fbff00);
+}
+.ServiceCard:nth-child(2):before,
+.ServiceCard:nth-child(2):after{
+	background: linear-gradient(235deg,#772aff ,#010615, #2196F3);
+}
+
+.ServiceCard .Content{
+	Position: absolute;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	height: 150px;
+	background-Color: rgba(0,0,0,.8);
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 0.5s;
+	z-index: 1;
+	font-size: 0.75em;
+}
+.ServiceCard:hover .Content{
+	opacity: 1;
+}
+
+
